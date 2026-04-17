@@ -1,0 +1,108 @@
+O Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Instale o PowerShell mais recente para obter novos recursos e aprimoramentos! https://aka.ms/PSWindows
+
+PS C:\Users\Dev_2o_Ano> node
+Welcome to Node.js v24.12.0.
+Type ".help" for more information.
+> console.log("Sistema de Atendimento - Feira de Tecnologia");
+Sistema de Atendimento - Feira de Tecnologia
+undefined
+> console.log(new Date());
+2026-04-17T18:55:24.884Z
+undefined
+> let nome = "Lucas";
+undefined
+> let idade = 17;
+undefined
+> let ingressos = 3;
+undefined
+> let valor = 20;
+undefined
+> console.log(nome, idade, ingressos, valor);
+Lucas 17 3 20
+undefined
+> if (idade < 0) {
+|     console.error("Idade inválida!");
+| } else {
+|     console.log("Idade válida");
+| }
+Idade válida
+undefined
+> if (ingressos > 5) {
+|     console.warn("Muitos ingressos comprados!");
+| }
+undefined
+> let total = ingressos * valor;
+undefined
+>
+> console.table([
+|     {
+|         Nome: nome,
+|         Idade: idade,
+|         Ingressos: ingressos,
+|         Valor: valor,
+|         Total: total
+|     }
+| ]);
+┌─────────┬─────────┬───────┬───────────┬───────┬───────┐
+│ (index) │ Nome    │ Idade │ Ingressos │ Valor │ Total │
+├─────────┼─────────┼───────┼───────────┼───────┼───────┤
+│ 0       │ 'Lucas' │ 17    │ 3         │ 20    │ 60    │
+└─────────┴─────────┴───────┴───────────┴───────┴───────┘
+undefined
+> let senha = 1;
+undefined
+>
+> while (senha <= ingressos) {
+|     console.log("Senha:", senha);
+|     senha++;
+| }
+Senha: 1
+Senha: 2
+Senha: 3
+3
+> for (let i = 1; i <= ingressos; i++) {
+|     console.log("Ingresso nº", i);
+| }
+Ingresso nº 1
+Ingresso nº 2
+Ingresso nº 3
+undefined
+> let setores = ["Games", "Robótica", "IA"];
+undefined
+>
+> setores.forEach(setor => {
+|     console.log("Setor:", setor);
+| });
+Setor: Games
+Setor: Robótica
+Setor: IA
+undefined
+> function saudacao(nome) {
+|     return "Bem-vindo, " + nome + "!";
+| }
+undefined
+>
+> console.log(saudacao(nome));
+Bem-vindo, Lucas!
+undefined
+> const fs = require("fs");
+undefined
+>
+> let resumo = `
+| Nome: ${nome}
+| Idade: ${idade}
+| Ingressos: ${ingressos}
+| Total: R$ ${total}
+| `;
+undefined
+>
+> fs.writeFileSync("saida.txt", resumo);
+undefined
+>
+> console.log("Arquivo gerado com sucesso!");
+Arquivo gerado com sucesso!
+undefined
+>
